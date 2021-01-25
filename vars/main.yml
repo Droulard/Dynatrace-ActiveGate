@@ -1,0 +1,4 @@
+---
+# vars file for test-role-1
+activegate_install_script: "Dynatrace-ActiveGate-Linux-x86-1.211.0.20210125-162700.sh"
+activegate_install_cmd: "sh /tmp/{{ activegate_install_script }}"

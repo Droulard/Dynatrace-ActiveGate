@@ -1,0 +1,7 @@
+---
+# tasks file for test-role-1
+- name: download latest linux activegate
+  include_tasks: "tasks/download.yml"
+
+- name: run activegate install script
+  include_tasks: "tasks/install.yml"

@@ -1,0 +1,8 @@
+---
+- name: download latest linux activegate
+  get_url:
+    url: "https://{{ dynatrace_environment_url }}/api/v1/deployment/installer/gateway/unix/latest?Api-Token={{ dynatrace_paas_token }}&arch=x86&flavor=default"
+    dest: "/tmp/{{ activegate_install_script }}"
+    mode: 0744
+
+
