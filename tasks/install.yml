@@ -1,2 +1,13 @@
- - name: run activegate install script
-   command: "{{ activegate_install_cmd }}"
+- name: set install parameters
+  set_fact:
+    activegate_install_params: "{{ item.key }}={{ item.value }}"
+  with_dict: "{{ dynatrace_activegate_install_args }}"
+  register: activegate_install_param
+
+- name: run activegate install script
+  command: "{{ activegate_install_cmd }} --set-network-zone={{activegate_network_zone}}  {{ activegate_install_param.results | map(attribute='ansible_facts.activegate_install_params') | join(' ') }}"
+  when: activegate_network_zone is defined
+
+- name: run activegate install script
+  command: "{{ activegate_install_cmd }} {{ activegate_install_param.results | map(attribute='ansible_facts.activegate_install_params') | join(' ') }}"
+  when: activegate_network_zone is undefined
