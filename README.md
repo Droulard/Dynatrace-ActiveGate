@@ -2,7 +2,7 @@ Dynatrace ActiveGate
 =========
 <strong>NOTE: </strong> This is only for Linux, Windows will be supported in a future version
 
-<strong>Purpose: </strong> Automate the process of downloading and configuring the Dynatrace ActiveGate
+<strong>Purpose: </strong> Automate the process of downloading and configuring the Dynatrace Environment ActiveGate
 
 Requirements
 ------------
@@ -52,6 +52,25 @@ Including an example of how to use your role (for instance, with variables passe
          CONFIG: /application/dynatrace/config
          TMP: /application/dynatrace/tmp
          PACKAGES_DIR: /application/dynatrace/packages
+
+Currently Supported
+---
++ Environment ActiveGate
++ Custom Installation allows you to set:
+    + PROXY=<proxy_address>:<proxy_port>
+    + USER=<user>
+    + INSTALL=<folder>
+    + PACKAGES_DIR=<folder>
+    + LOG=<folder>
+    + CONFIG=<folder>
+    + TEMP=<folder>
+    + --set-network-zone=<name>
+
+In Development
+---
++ Windows AG Support
++ Synthetic and z/OS routing Active Gates
++ CA Cert Support
 
 
 License
