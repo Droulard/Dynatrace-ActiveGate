@@ -3,6 +3,7 @@
     activegate_install_params: "{{ item.key }}={{ item.value }}"
   with_dict: "{{ dynatrace_activegate_install_args }}"
   register: activegate_install_param
+  when: dynatrace_activegate_install_args is defined
 
 - name: run activegate install script
   command: "{{ activegate_install_cmd }} --set-network-zone={{activegate_network_zone}}  {{ activegate_install_param.results | map(attribute='ansible_facts.activegate_install_params') | join(' ') }}"
