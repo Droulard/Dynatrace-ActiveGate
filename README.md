@@ -1,7 +1,8 @@
 Dynatrace ActiveGate
 =========
+<strong>NOTE: </strong> This is only for Linux, Windows will be supported in a future version
 
-Automate the process of downloading and configuring the Dynatrace ActiveGate
+<strong>Purpose: </strong> Automate the process of downloading and configuring the Dynatrace ActiveGate
 
 Requirements
 ------------
