@@ -6,7 +6,9 @@ Dynatrace ActiveGate
 
 Requirements
 ------------
-Dynatrace Tenant
++ Dynatrace Tenant
++ PaaS Token 
++ Network Zone (optional)
 
 Installation
 ------------
@@ -17,19 +19,18 @@ ansible-galaxy install droulard.dynatrace_activegate
 
 Role Variables
 --------------
-| Variable      | Description |
-| ----------- | ----------- |
-| dynatrace_environment_url      | URL to Dynatrace Tenant       |
-| dynatrace_paas_token   | Dynatrace PasS Token        |
-| activegate_network_zone   | Network Zone to use for ActiveGate        |
-| dynatrace_activegate_install_args   | Installation Arguments for installing the active gate    |
+| Variable      | Description | Optional |
+| ----------- | ----------- | ----------- |
+| dynatrace_environment_url      | URL to Dynatrace Tenant | Required |
+| dynatrace_paas_token   | Dynatrace PasS Token        | Required |
+| activegate_network_zone   | Network Zone to use for ActiveGate        | Optional |
+| dynatrace_activegate_install_args   | Installation Arguments for installing the active gate    | Optional |
 
 
 Dependencies
 ------------
-+ Dynatrace Tenant
-+ PaaS Token 
-+ Network Zone (optional)
++ None as of now
+
 
 
 Example Playbook
