@@ -1,11 +1,18 @@
-Role Name
+Dynatrace ActiveGate
 =========
 
-Download Dynatrace ActiveGate
+Automate the process of downloading and configuring the Dynatrace ActiveGate
 
 Requirements
 ------------
 Dynatrace Tenant
+
+Installation
+------------
+Install the Role with: 
+```
+ansible-galaxy install droulard.dynatrace_activegate
+```
 
 Role Variables
 --------------
@@ -28,7 +35,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: localhost
       roles:
-      - dynatrace.activegate
+      - droulard.dynatrace_activegate
       vars: 
        dynatrace_environment_url: <tenant_id>.live.dynatrace.com
        dynatrace_paas_token: <paas_token>
