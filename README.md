@@ -26,7 +26,10 @@ Role Variables
 
 Dependencies
 ------------
-Active Gate
++ Dynatrace Tenant
++ PaaS Token 
++ Network Zone (optional)
+
 
 Example Playbook
 ----------------
