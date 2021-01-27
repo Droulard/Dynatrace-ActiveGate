@@ -7,8 +7,16 @@
 
 - name: run activegate install script
   command: "{{ activegate_install_cmd }} --set-network-zone={{activegate_network_zone}}  {{ activegate_install_param.results | map(attribute='ansible_facts.activegate_install_params') | join(' ') }}"
-  when: activegate_network_zone is defined
+  when: activegate_network_zone is defined and activegate_install_params is defined
 
 - name: run activegate install script
   command: "{{ activegate_install_cmd }} {{ activegate_install_param.results | map(attribute='ansible_facts.activegate_install_params') | join(' ') }}"
-  when: activegate_network_zone is undefined
+  when: activegate_network_zone is undefined and activegate_install_params is defined
+
+- name: run activegate install script
+  command: "{{ activegate_install_cmd }} --set-network-zone={{activegate_network_zone}}"
+  when: activegate_network_zone is defined and activegate_install_params is undefined
+
+- name: run activegate install script
+  command: "{{ activegate_install_cmd }}"
+  when: activegate_network_zone is undefined and activegate_install_params is undefined
