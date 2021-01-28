@@ -65,12 +65,12 @@ Currently Supported
     + CONFIG=<folder>
     + TEMP=<folder>
     + --set-network-zone=<name>
+    + CA CERT SUPPORT
 
 In Development
 ---
 + Windows AG Support
 + Synthetic and z/OS routing Active Gates
-+ CA Cert Support
 
 
 License
