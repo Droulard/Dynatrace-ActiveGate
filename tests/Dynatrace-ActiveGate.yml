@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - droulard.dynatrace_activegate
+  vars: 
+    dynatrace_environment_url: <tenant id>.dev.dynatracelabs.com
+    dynatrace_paas_token: <paas token>
+    activegate_network_zone: default
+    dynatrace_activegate_install_args:
+     # PROXY: proxy:port 
+      INSTALL: /app/bin/dynatrace 
+      LOG: /app/bin/dynatrace/logs 
+      CONFIG: /app/bin/dynatrace/config 
+      TEMP: /app/bin/dynatrace/tmp 
+      PACKAGES_DIR: /app/bin/dynatrace/packages 
+      # "--ca-certificate-file": file-path
+      # "--ca-certificate-password-file": file-path      
