@@ -57,14 +57,14 @@ Currently Supported
 ---
 + Environment ActiveGate
 + Custom Installation allows you to set:
-    + PROXY=<proxy_address>:<proxy_port>
-    + USER=<user>
-    + INSTALL=<folder>
-    + PACKAGES_DIR=<folder>
-    + LOG=<folder>
-    + CONFIG=<folder>
-    + TEMP=<folder>
-    + --set-network-zone=<name>
+    + PROXY
+    + USER
+    + INSTALL
+    + PACKAGES_DIR
+    + LOG
+    + CONFIG
+    + TEMP
+    + --set-network-zone
     + CA CERT SUPPORT
 
 In Development
